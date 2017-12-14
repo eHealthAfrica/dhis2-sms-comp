@@ -87,7 +87,10 @@ public class SmsSubmission {
 			String key = kvSplit[0], val = kvSplit[1];
 			keyValues.put(key, val);
 			
-			valueCounts.putIfAbsent(val, 0);
+			//TODO: Getting issues in Android with .putIfAbsent so we
+			//need to write this out explicitly
+			if (!valueCounts.containsKey(val)) valueCounts.put(val, 0);
+			
 			int valCount = valueCounts.get(val) + 1;
 			valueCounts.put(val, valCount);
 			
