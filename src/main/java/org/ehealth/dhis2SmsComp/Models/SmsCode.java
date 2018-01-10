@@ -12,4 +12,7 @@ public class SmsCode {
 	@Expose
     public String smsCode;
 
+	public String getSmsCode() {
+		return smsCode;
+	}
 }

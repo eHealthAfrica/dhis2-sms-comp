@@ -47,7 +47,9 @@ public class SmsSubmission {
 		//Find sms command
 		this.currentSmsCmd = findSmsCommand(smsCmdName, smsCmdList);		
 		Objects.requireNonNull(this.currentSmsCmd);
-				
+		//Sort the SMS codes by alphabetical order
+		this.currentSmsCmd.sortSmsCodes();
+		
 		//Calculate key length
 		this.keyLength = BinaryUtils.log2(this.currentSmsCmd.smsCodes.size()) + 1;		
 		
@@ -67,7 +69,7 @@ public class SmsSubmission {
 		//Set other submission params
 		setSubmissionParams(keyValueStr);
 	}
-
+	
 	/**
 	 * Look through the string of key value pairs and set up the params of this
 	 * sms submission accordingly, i.e. the bit length of ints given the highest value
