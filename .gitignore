@@ -33,3 +33,6 @@ gradlew.bat
 
 #Eclipse
 .project
+/bin/
+.classpath
+.settings
