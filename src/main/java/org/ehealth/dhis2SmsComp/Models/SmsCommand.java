@@ -23,6 +23,6 @@ public class SmsCommand {
     public ArrayList<SmsCode> smsCodes;
     
     public void sortSmsCodes() {
-    		smsCodes.sort(Comparator.comparing(SmsCode::getSmsCode));
+    		smsCodes.sort(Comparator.comparing(SmsCode::getCreated));
     }
 }

@@ -12,7 +12,14 @@ public class SmsCode {
 	@Expose
     public String smsCode;
 
-	public String getSmsCode() {
-		return smsCode;
+	public String getCreated() {
+		return dataElement.created;
+	}
+	
+	public DataElement dataElement;
+	
+	private class DataElement {
+		@Expose
+		public String created;
 	}
 }
