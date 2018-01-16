@@ -6,8 +6,8 @@ version = '0.0.1-SNAPSHOT'
 
 description = """sms-submission-protocol"""
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
 tasks.withType(JavaCompile) {
 	options.encoding = 'UTF-8'
 }
