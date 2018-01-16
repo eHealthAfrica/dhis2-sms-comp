@@ -1,6 +1,7 @@
 package org.ehealth.dhis2SmsComp.Models;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 
 import com.google.gson.annotations.Expose;
@@ -23,6 +24,13 @@ public class SmsCommand {
     public ArrayList<SmsCode> smsCodes;
     
     public void sortSmsCodes() {
-    		smsCodes.sort(Comparator.comparing(SmsCode::getCreated));
+    		if (smsCodes != null && !smsCodes.isEmpty()) {
+    			Collections.sort(smsCodes, new Comparator<SmsCode>() {
+    			    @Override
+    			    public int compare(SmsCode code1, SmsCode code2) {
+    			        return code1.getCreated().compareTo(code2.getCreated());
+    			    }
+    			});     			
+    		}
     }
 }

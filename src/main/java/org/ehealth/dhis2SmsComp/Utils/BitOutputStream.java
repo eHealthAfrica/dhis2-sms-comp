@@ -47,11 +47,12 @@ public final class BitOutputStream implements AutoCloseable {
 	
 	/**
 	 * Writes n bits to the stream
-	 * @param i the integer to write, which should be representable in n or less bits
+	 * @param i the integer to write, which should be positive and representable in n or less bits
 	 * @param n the number of bits to write i in 
 	 * @throws IOException if an I/O exception occurred
 	 */
 	public void write(int i, int n) throws IOException {
+		if(i < 0) throw new NumberFormatException("Cannot write negative ints");
 		int mask = 1 << (n - 1);
 		while (n > 0) {
 			int nextBit = (mask & i) > 0 ? 1 : 0;
