@@ -47,8 +47,6 @@ public class SmsSubmission {
 		//Find sms command
 		this.currentSmsCmd = findSmsCommand(smsCmdName, smsCmdList);		
 		Objects.requireNonNull(this.currentSmsCmd);
-		//Sort the SMS codes by alphabetical order
-		this.currentSmsCmd.sortSmsCodes();
 		
 		//Calculate key length
 		this.keyLength = BinaryUtils.log2(this.currentSmsCmd.smsCodes.size()) + 1;		

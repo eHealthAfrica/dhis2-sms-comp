@@ -34,6 +34,9 @@ public class SmsEncoder {
 		Gson gson = new Gson();
 		ArrayList<SmsCommand> smsList = new ArrayList<SmsCommand>();
 		smsList.addAll(Arrays.asList(gson.fromJson(smsCmds, SmsCommand[].class)));
+		for (SmsCommand smsCmd : smsList) {
+			smsCmd.sortSmsCodes();
+		}
 		this.smsCmdList = smsList;
 	}
 	
@@ -86,8 +89,9 @@ public class SmsEncoder {
 			//Skip if it's the remaining value
 			if (!val.equals(subm.remainVal) || subm.remainVal.isEmpty()) {
 				int keyId = subm.currentSmsCmd.smsCodes.indexOf(code);
+				if (keyId < 0) throw new RuntimeException("Code not present in smsCodes list: " + key);
 				bitStream.write(keyId, subm.keyLength);
-				detectTypeAndWriteValue(val, bitStream, subm);				
+				detectTypeAndWriteValue(val, bitStream, subm);
 			}
 		}
 				

@@ -35,6 +35,9 @@ public class SmsDecoder {
 		Gson gson = new Gson();
 		ArrayList<SmsCommand> smsList = new ArrayList<SmsCommand>();
 		smsList.addAll(Arrays.asList(gson.fromJson(smsCmds, SmsCommand[].class)));
+		for (SmsCommand smsCmd : smsList) {
+			smsCmd.sortSmsCodes();
+		}
 		this.smsCmdList = smsList;
 	}
 	
