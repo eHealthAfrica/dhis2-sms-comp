@@ -22,8 +22,8 @@ public class SSPConst {
 	public static int EPOCH_DATE_BITLEN = 32;
 	public static int TYPE_BITLEN = 4;
 	public static int CHAR_BITLEN = 7;
-	public static int KEYLEN_BITLEN = 4;
-	public static int INTLEN_BITLEN = 4;
+	public static int KEYLEN_BITLEN = 6;
+	public static int INTLEN_BITLEN = 6;
 	
 	// TODO: DHIS2 actually supports a number of different separators
 	public static String KVPAIRS_SEPARATOR = "|";
