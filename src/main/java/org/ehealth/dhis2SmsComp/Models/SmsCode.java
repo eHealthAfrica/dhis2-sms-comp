@@ -15,6 +15,10 @@ public class SmsCode {
 	public String getCreated() {
 		return dataElement.created;
 	}
+
+	public String getCode() {
+		return smsCode;
+	}	
 	
 	public DataElement dataElement;
 	
