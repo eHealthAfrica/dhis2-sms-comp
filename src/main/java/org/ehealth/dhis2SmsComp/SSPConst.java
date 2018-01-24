@@ -21,7 +21,7 @@ public class SSPConst {
 	public static int SUBM_DATE_BITLEN = 12;
 	public static int EPOCH_DATE_BITLEN = 32;
 	public static int TYPE_BITLEN = 4;
-	public static int CHAR_BITLEN = 7;
+	public static int CHAR_BITLEN = 8;
 	public static int KEYLEN_BITLEN = 6;
 	public static int INTLEN_BITLEN = 6;
 	
