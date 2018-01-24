@@ -28,7 +28,9 @@ public class SmsCommand {
     			Collections.sort(smsCodes, new Comparator<SmsCode>() {
     			    @Override
     			    public int compare(SmsCode code1, SmsCode code2) {
-    			        return code1.getCreated().compareTo(code2.getCreated());
+    			    		int result = code1.getCreated().compareTo(code2.getCreated());
+    			    		if (result == 0) result = code1.getCode().compareTo(code2.getCode());
+    			        return result;
     			    }
     			});     			
     		}
