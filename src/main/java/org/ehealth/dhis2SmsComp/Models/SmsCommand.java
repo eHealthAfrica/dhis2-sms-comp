@@ -5,7 +5,6 @@ import java.util.Collections;
 import java.util.Comparator;
 
 import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 
 /**
  * Purely a JSON parsing class for a DHIS2 SmsCommand
@@ -14,13 +13,12 @@ import com.google.gson.annotations.SerializedName;
  */
 public class SmsCommand {
     @Expose
-    public String commandName;
+    public String name;
 
     @Expose
     public String separator;
     
     @Expose
-    @SerializedName("smsCode")
     public ArrayList<SmsCode> smsCodes;
     
     public void sortSmsCodes() {

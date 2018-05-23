@@ -10,25 +10,20 @@ import com.google.gson.annotations.Expose;
 public class SmsCode {
  
 	@Expose
-    public String smsCode;
+    public String code;
 
 	public String getCreated() {
 		return dataElement.created;
 	}
 
 	public String getCode() {
-		return smsCode;
+		return code;
 	}	
 	
 	public DataElement dataElement;
-	
-	private class DataElement {
-		@Expose
-		public String created;
-	}
-	
+		
     @Override
     public String toString() {
-    		return smsCode;
+    		return code;
     }	
 }
