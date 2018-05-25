@@ -126,7 +126,7 @@ public class SmsSubmission {
 		String sms = "";
     		if (this.currentSmsCmd == null) return sms;
     		
-    		sms += this.currentSmsCmd.commandName + " ";
+    		sms += this.currentSmsCmd.name + " ";
     		if (this.submDate > 0) sms += String.format("%04d", this.submDate) + " ";
     		
     		for (String key : this.kvPairsMap.keySet()) {
@@ -147,7 +147,7 @@ public class SmsSubmission {
      */
     private SmsCommand findSmsCommand(String smsCmdName, ArrayList<SmsCommand> smsCmdList) {    	
 		for (SmsCommand cmd : smsCmdList) {
-			if (cmd.commandName.equals(smsCmdName)) {
+			if (cmd.name.equals(smsCmdName)) {
 				return cmd;
 			}
 		}
@@ -160,9 +160,9 @@ public class SmsSubmission {
      * @return the SmsCode if found
      */
     public SmsCode findCode(String key) {    		
-		for (SmsCode code : this.currentSmsCmd.smsCodes) {
-			if (code.smsCode.equals(key)) {
-				return code;
+		for (SmsCode smsCode : this.currentSmsCmd.smsCodes) {
+			if (smsCode.code.equals(key)) {
+				return smsCode;
 			}
 		}
 		

@@ -1,6 +1,7 @@
 package org.ehealth.dhis2SmsComp.Models;
 
 import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 /**
  * Purely a JSON parsing class for a DHIS2 SmsCode
@@ -10,25 +11,26 @@ import com.google.gson.annotations.Expose;
 public class SmsCode {
  
 	@Expose
-    public String smsCode;
+	@SerializedName(value="code", alternate={"smsCode"})
+    public String code;
 
 	public String getCreated() {
 		return dataElement.created;
 	}
 
 	public String getCode() {
-		return smsCode;
+		return code;
 	}	
 	
 	public DataElement dataElement;
-	
 	private class DataElement {
 		@Expose
 		public String created;
 	}
 	
+	
     @Override
     public String toString() {
-    		return smsCode;
+    		return code;
     }	
 }

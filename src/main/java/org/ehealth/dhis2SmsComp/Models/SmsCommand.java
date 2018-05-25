@@ -14,13 +14,14 @@ import com.google.gson.annotations.SerializedName;
  */
 public class SmsCommand {
     @Expose
-    public String commandName;
+    @SerializedName(value="name", alternate={"commandName"})
+    public String name;
 
     @Expose
     public String separator;
     
     @Expose
-    @SerializedName("smsCode")
+    @SerializedName(value="smsCodes", alternate={"smsCode"})
     public ArrayList<SmsCode> smsCodes;
     
     public void sortSmsCodes() {

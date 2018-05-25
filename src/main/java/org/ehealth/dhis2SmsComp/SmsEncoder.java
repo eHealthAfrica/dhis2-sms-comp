@@ -9,12 +9,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 
+import org.apache.commons.io.IOUtils;
 import org.ehealth.dhis2SmsComp.Models.SmsCode;
 import org.ehealth.dhis2SmsComp.Models.SmsCommand;
 import org.ehealth.dhis2SmsComp.Models.SmsSubmission;
 import org.ehealth.dhis2SmsComp.Utils.BitOutputStream;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 /**
  * Class used to encode a DHIS2 formatted SMS into a compressed binary form.
@@ -25,19 +27,16 @@ import com.google.gson.Gson;
  */
 public class SmsEncoder {
 	private ArrayList<SmsCommand> smsCmdList;
-
+	
 	/**
 	 * Instantiates and SMSEncoder to be used to encode DHIS2 SMSs
 	 * @param smsCmds, the JSON of SMS commands from the DHIS2 API
 	 */
-	public SmsEncoder(Reader smsCmds) {
-		Gson gson = new Gson();
-		ArrayList<SmsCommand> smsList = new ArrayList<SmsCommand>();
-		smsList.addAll(Arrays.asList(gson.fromJson(smsCmds, SmsCommand[].class)));
-		for (SmsCommand smsCmd : smsList) {
+	public SmsEncoder(ArrayList<SmsCommand> smsCmds) {		
+		this.smsCmdList = new ArrayList<SmsCommand>(smsCmds);
+		for (SmsCommand smsCmd : this.smsCmdList) {
 			smsCmd.sortSmsCodes();
 		}
-		this.smsCmdList = smsList;
 	}
 	
 	/**
