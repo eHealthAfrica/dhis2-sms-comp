@@ -27,18 +27,15 @@ public class SmsDecoder {
 	private ArrayList<SmsCommand> smsCmdList;
 
 	/**
-	 * Instantiate a decoder given a JSON of the SmsCommands in this
+	 * Instantiate a decoder given a list of the SmsCommands in this
 	 * DHIS2 environment
 	 * @param smsCmds
 	 */
-	public SmsDecoder(Reader smsCmds) {
-		Gson gson = new Gson();
-		ArrayList<SmsCommand> smsList = new ArrayList<SmsCommand>();
-		smsList.addAll(Arrays.asList(gson.fromJson(smsCmds, SmsCommand[].class)));
-		for (SmsCommand smsCmd : smsList) {
+	public SmsDecoder(ArrayList<SmsCommand> smsCmds) {
+		this.smsCmdList = new ArrayList<SmsCommand>(smsCmds);
+		for (SmsCommand smsCmd : this.smsCmdList) {
 			smsCmd.sortSmsCodes();
 		}
-		this.smsCmdList = smsList;
 	}
 	
 	/**
@@ -92,7 +89,7 @@ public class SmsDecoder {
 				remainCodes.remove(smsCode);
 				String val = decodeValue(bitStream, subm);
 				if (val.isEmpty()) continue;
-				subm.kvPairsMap.put(smsCode.smsCode, val);
+				subm.kvPairsMap.put(smsCode.code, val);
 				
 			} catch (EOFException e) {
 				break;				
@@ -102,7 +99,7 @@ public class SmsDecoder {
 		//Write out the remaining codes as the remain val if it's not blank
 		if (!subm.remainVal.isEmpty()) {
 			for (SmsCode code : remainCodes) {
-				subm.kvPairsMap.put(code.smsCode, subm.remainVal);
+				subm.kvPairsMap.put(code.code, subm.remainVal);
 			}
 		}
 		
