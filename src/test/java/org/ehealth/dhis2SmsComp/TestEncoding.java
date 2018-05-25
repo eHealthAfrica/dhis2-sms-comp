@@ -57,7 +57,7 @@ public class TestEncoding extends TestCase {
 		try {
 			cmdsJson = new FileReader("src/test/resources/oldSmsCommands.json");
 			String testSMS = new String(Files.readAllBytes(Paths.get("src/test/resources/testSMS.txt")));
-			ArrayList<SmsCommand> smsCmds = SmsCommandParser.parseOld(IOUtils.toString(cmdsJson));
+			ArrayList<SmsCommand> smsCmds = SmsCommandParser.parse(IOUtils.toString(cmdsJson));
 			SmsEncoder enc = new SmsEncoder(smsCmds);
 			binarySubm = enc.encode(testSMS);
 		} catch (Exception e) {

@@ -57,7 +57,7 @@ public class TestDecoding extends TestCase {
 			cmdsJson = new FileReader("src/test/resources/oldSmsCommands.json");
 			String encodedSMS = new String(Files.readAllBytes(Paths.get("src/test/resources/encodedSMS.txt")));
 			byte[] binEncSMS = Base64.getDecoder().decode(encodedSMS);
-			ArrayList<SmsCommand> smsCmds = SmsCommandParser.parseOld(IOUtils.toString(cmdsJson));
+			ArrayList<SmsCommand> smsCmds = SmsCommandParser.parse(IOUtils.toString(cmdsJson));
 			SmsDecoder dec = new SmsDecoder(smsCmds);
 			decodedSMS = dec.decode(binEncSMS);
 		} catch (Exception e) {

@@ -1,827 +1,829 @@
-[
-    {
-        "lastUpdated": "2018-05-14T16:36:36.000",
-        "id": "bU21Dt1e3BS",
-        "href": "https://dhis2-sl-training.ehealthafrica.org/api/smsCommands/bU21Dt1e3BS",
-        "created": "2018-05-14T16:36:36.000",
-        "name": "dummyCmd1",
-        "displayName": "dummyCmd1",
-        "currentPeriodUsedForReporting": false,
-        "externalAccess": false,
-        "parserType": "KEY_VALUE_PARSER",
-        "access": {
-            "read": true,
-            "update": true,
-            "externalize": true,
-            "delete": true,
-            "write": true,
-            "manage": true
-        },
-        "dataset": {
-            "id": "w9c9UJ3Prus"
-        },
-        "smsCodes": [],
-        "specialCharacters": [],
-        "translations": [],
-        "userGroupAccesses": [],
-        "attributeValues": [],
-        "userAccesses": []
-    },
-    {
-        "lastUpdated": "2018-05-14T16:36:36.000",
-        "id": "scEgHDred3P",
-        "href": "https://dhis2-sl-training.ehealthafrica.org/api/smsCommands/scEgHDred3P",
-        "created": "2018-05-14T16:36:36.000",
-        "name": "idsr",
-        "moreThanOneOrgUnitMessage": "User belongs to more than one OrgUnit",
-        "displayName": "idsr",
-        "currentPeriodUsedForReporting": false,
-        "externalAccess": false,
-        "noUserMessage": "No user found for that phone number",
-        "defaultMessage": "No data values found",
-        "completenessMethod": "AT_LEAST_ONE_DATAVALUE",
-        "wrongFormatMessage": "Incorrectly formatted message",
-        "separator": "=",
-        "successMessage": "Form submitted successfully",
-        "parserType": "KEY_VALUE_PARSER",
-        "access": {
-            "read": true,
-            "update": true,
-            "externalize": true,
-            "delete": true,
-            "write": true,
-            "manage": true
-        },
-        "dataset": {
-            "id": "rq0LNr72Ndo"
-        },
-        "smsCodes": [
-            {
-                "code": "F1e0",
-                "dataElement": {
-                    "created": "2016-02-11T13:31:16.132"
-                }
-            },
-            {
-                "code": "drDA",
-                "dataElement": {
-                    "created": "2016-05-13T10:32:35.811"
-                }
-            },
-            {
-                "code": "Dye0",
-                "dataElement": {
-                    "created": "2016-02-11T13:53:44.042"
-                }
-            },
-            {
-                "code": "kGC5",
-                "dataElement": {
-                    "created": "2016-02-11T13:15:37.178"
-                }
-            },
-            {
-                "code": "zSC5",
-                "dataElement": {
-                    "created": "2016-02-11T13:40:53.898"
-                }
-            },
-            {
-                "code": "Zye0",
-                "dataElement": {
-                    "created": "2016-02-11T12:53:10.231"
-                }
-            },
-            {
-                "code": "BRCi",
-                "dataElement": {
-                    "created": "2016-02-11T13:15:53.109"
-                }
-            },
-            {
-                "code": "ZyCi",
-                "dataElement": {
-                    "created": "2016-02-11T12:53:10.231"
-                }
-            },
-            {
-                "code": "wWCi",
-                "dataElement": {
-                    "created": "2016-02-11T13:36:54.244"
-                }
-            },
-            {
-                "code": "HVDA",
-                "dataElement": {
-                    "created": "2018-01-02T11:28:10.090"
-                }
-            },
-            {
-                "code": "F1Ci",
-                "dataElement": {
-                    "created": "2016-02-11T13:31:16.132"
-                }
-            },
-            {
-                "code": "JyCi",
-                "dataElement": {
-                    "created": "2016-02-11T13:39:04.819"
-                }
-            },
-            {
-                "code": "gqe0",
-                "dataElement": {
-                    "created": "2016-02-11T13:09:31.552"
-                }
-            },
-            {
-                "code": "RxDA",
-                "dataElement": {
-                    "created": "2017-07-19T17:47:24.249"
-                }
-            },
-            {
-                "code": "wDC5",
-                "dataElement": {
-                    "created": "2016-02-11T13:54:19.106"
-                }
-            },
-            {
-                "code": "ODCi",
-                "dataElement": {
-                    "created": "2016-02-11T13:14:49.440"
-                }
-            },
-            {
-                "code": "pfDA",
-                "dataElement": {
-                    "created": "2018-01-02T11:28:10.090"
-                }
-            },
-            {
-                "code": "dxCi",
-                "dataElement": {
-                    "created": "2016-02-11T13:41:11.871"
-                }
-            },
-            {
-                "code": "zMe0",
-                "dataElement": {
-                    "created": "2016-02-11T13:17:09.140"
-                }
-            },
-            {
-                "code": "u6e0",
-                "dataElement": {
-                    "created": "2016-02-11T13:20:46.332"
-                }
-            },
-            {
-                "code": "EZe0",
-                "dataElement": {
-                    "created": "2016-02-11T13:37:55.587"
-                }
-            },
-            {
-                "code": "BpDA",
-                "dataElement": {
-                    "created": "2016-05-19T11:35:34.263"
-                }
-            },
-            {
-                "code": "fajp",
-                "dataElement": {
-                    "created": "2016-02-11T13:43:20.597"
-                }
-            },
-            {
-                "code": "dHCi",
-                "dataElement": {
-                    "created": "2016-02-11T13:14:21.012"
-                }
-            },
-            {
-                "code": "RZe0",
-                "dataElement": {
-                    "created": "2016-02-11T13:36:21.927"
-                }
-            },
-            {
-                "code": "wWC5",
-                "dataElement": {
-                    "created": "2016-02-11T13:36:54.244"
-                }
-            },
-            {
-                "code": "FtCi",
-                "dataElement": {
-                    "created": "2016-02-11T13:39:34.403"
-                }
-            },
-            {
-                "code": "gqjp",
-                "dataElement": {
-                    "created": "2016-02-11T13:09:31.552"
-                }
-            },
-            {
-                "code": "zSe0",
-                "dataElement": {
-                    "created": "2016-02-11T13:40:53.898"
-                }
-            },
-            {
-                "code": "S3DA",
-                "dataElement": {
-                    "created": "2016-06-16T10:13:17.469"
-                }
-            },
-            {
-                "code": "wDjp",
-                "dataElement": {
-                    "created": "2016-02-11T13:54:19.106"
-                }
-            },
-            {
-                "code": "ZfC5",
-                "dataElement": {
-                    "created": "2016-02-11T13:16:46.401"
-                }
-            },
-            {
-                "code": "EpCi",
-                "dataElement": {
-                    "created": "2016-02-11T13:08:51.992"
-                }
-            },
-            {
-                "code": "wWjp",
-                "dataElement": {
-                    "created": "2016-02-11T13:36:54.244"
-                }
-            },
-            {
-                "code": "qwCi",
-                "dataElement": {
-                    "created": "2016-02-11T13:42:01.325"
-                }
-            },
-            {
-                "code": "KnCi",
-                "dataElement": {
-                    "created": "2016-02-11T13:35:41.446"
-                }
-            },
-            {
-                "code": "rqDA",
-                "dataElement": {
-                    "created": "2018-01-02T11:28:10.090"
-                }
-            },
-            {
-                "code": "JyC5",
-                "dataElement": {
-                    "created": "2016-02-11T13:39:04.819"
-                }
-            },
-            {
-                "code": "dxjp",
-                "dataElement": {
-                    "created": "2016-02-11T13:41:11.871"
-                }
-            },
-            {
-                "code": "DyCi",
-                "dataElement": {
-                    "created": "2016-02-11T13:53:44.042"
-                }
-            },
-            {
-                "code": "FHC5",
-                "dataElement": {
-                    "created": "2016-02-11T13:32:32.793"
-                }
-            },
-            {
-                "code": "KPjp",
-                "dataElement": {
-                    "created": "2016-02-11T13:54:41.036"
-                }
-            },
-            {
-                "code": "DyC5",
-                "dataElement": {
-                    "created": "2016-02-11T13:53:44.042"
-                }
-            },
-            {
-                "code": "RZC5",
-                "dataElement": {
-                    "created": "2016-02-11T13:36:21.927"
-                }
-            },
-            {
-                "code": "nEe0",
-                "dataElement": {
-                    "created": "2016-02-11T13:32:03.311"
-                }
-            },
-            {
-                "code": "Fte0",
-                "dataElement": {
-                    "created": "2016-02-11T13:39:34.403"
-                }
-            },
-            {
-                "code": "KPCi",
-                "dataElement": {
-                    "created": "2016-02-11T13:54:41.036"
-                }
-            },
-            {
-                "code": "qwjp",
-                "dataElement": {
-                    "created": "2016-02-11T13:42:01.325"
-                }
-            },
-            {
-                "code": "g1DA",
-                "dataElement": {
-                    "created": "2018-01-11T12:06:17.548"
-                }
-            },
-            {
-                "code": "gqCi",
-                "dataElement": {
-                    "created": "2016-02-11T13:09:31.552"
-                }
-            },
-            {
-                "code": "u6C5",
-                "dataElement": {
-                    "created": "2016-02-11T13:20:46.332"
-                }
-            },
-            {
-                "code": "Zfe0",
-                "dataElement": {
-                    "created": "2016-02-11T13:16:46.401"
-                }
-            },
-            {
-                "code": "wWe0",
-                "dataElement": {
-                    "created": "2016-02-11T13:36:54.244"
-                }
-            },
-            {
-                "code": "Pcjp",
-                "dataElement": {
-                    "created": "2016-02-11T13:18:41.156"
-                }
-            },
-            {
-                "code": "BRC5",
-                "dataElement": {
-                    "created": "2016-02-11T13:15:53.109"
-                }
-            },
-            {
-                "code": "gqC5",
-                "dataElement": {
-                    "created": "2016-02-11T13:09:31.552"
-                }
-            },
-            {
-                "code": "dxC5",
-                "dataElement": {
-                    "created": "2016-02-11T13:41:11.871"
-                }
-            },
-            {
-                "code": "ibjp",
-                "dataElement": {
-                    "created": "2016-02-11T13:13:59.219"
-                }
-            },
-            {
-                "code": "zSjp",
-                "dataElement": {
-                    "created": "2016-02-11T13:40:53.898"
-                }
-            },
-            {
-                "code": "PcC5",
-                "dataElement": {
-                    "created": "2016-02-11T13:18:41.156"
-                }
-            },
-            {
-                "code": "dHC5",
-                "dataElement": {
-                    "created": "2016-02-11T13:14:21.012"
-                }
-            },
-            {
-                "code": "xLDA",
-                "dataElement": {
-                    "created": "2017-07-21T10:08:43.916"
-                }
-            },
-            {
-                "code": "ZfCi",
-                "dataElement": {
-                    "created": "2016-02-11T13:16:46.401"
-                }
-            },
-            {
-                "code": "Kne0",
-                "dataElement": {
-                    "created": "2016-02-11T13:35:41.446"
-                }
-            },
-            {
-                "code": "F1jp",
-                "dataElement": {
-                    "created": "2016-02-11T13:31:16.132"
-                }
-            },
-            {
-                "code": "Jyjp",
-                "dataElement": {
-                    "created": "2016-02-11T13:39:04.819"
-                }
-            },
-            {
-                "code": "RZCi",
-                "dataElement": {
-                    "created": "2016-02-11T13:36:21.927"
-                }
-            },
-            {
-                "code": "zMCi",
-                "dataElement": {
-                    "created": "2016-02-11T13:17:09.140"
-                }
-            },
-            {
-                "code": "GFDA",
-                "dataElement": {
-                    "created": "2018-01-02T11:28:10.090"
-                }
-            },
-            {
-                "code": "Pce0",
-                "dataElement": {
-                    "created": "2016-02-11T13:18:41.156"
-                }
-            },
-            {
-                "code": "dHjp",
-                "dataElement": {
-                    "created": "2016-02-11T13:14:21.012"
-                }
-            },
-            {
-                "code": "faC5",
-                "dataElement": {
-                    "created": "2016-02-11T13:43:20.597"
-                }
-            },
-            {
-                "code": "Epjp",
-                "dataElement": {
-                    "created": "2016-02-11T13:08:51.992"
-                }
-            },
-            {
-                "code": "ETDA",
-                "dataElement": {
-                    "created": "2016-05-23T23:25:13.865"
-                }
-            },
-            {
-                "code": "ZyC5",
-                "dataElement": {
-                    "created": "2016-02-11T12:53:10.231"
-                }
-            },
-            {
-                "code": "FHCi",
-                "dataElement": {
-                    "created": "2016-02-11T13:32:32.793"
-                }
-            },
-            {
-                "code": "RZjp",
-                "dataElement": {
-                    "created": "2016-02-11T13:36:21.927"
-                }
-            },
-            {
-                "code": "dxe0",
-                "dataElement": {
-                    "created": "2016-02-11T13:41:11.871"
-                }
-            },
-            {
-                "code": "EZC5",
-                "dataElement": {
-                    "created": "2016-02-11T13:37:55.587"
-                }
-            },
-            {
-                "code": "wDCi",
-                "dataElement": {
-                    "created": "2016-02-11T13:54:19.106"
-                }
-            },
-            {
-                "code": "FHjp",
-                "dataElement": {
-                    "created": "2016-02-11T13:32:32.793"
-                }
-            },
-            {
-                "code": "u6jp",
-                "dataElement": {
-                    "created": "2016-02-11T13:20:46.332"
-                }
-            },
-            {
-                "code": "fae0",
-                "dataElement": {
-                    "created": "2016-02-11T13:43:20.597"
-                }
-            },
-            {
-                "code": "ibCi",
-                "dataElement": {
-                    "created": "2016-02-11T13:13:59.219"
-                }
-            },
-            {
-                "code": "u1DA",
-                "dataElement": {
-                    "created": "2017-06-06T19:22:04.351"
-                }
-            },
-            {
-                "code": "kGe0",
-                "dataElement": {
-                    "created": "2016-02-11T13:15:37.178"
-                }
-            },
-            {
-                "code": "Zyjp",
-                "dataElement": {
-                    "created": "2016-02-11T12:53:10.231"
-                }
-            },
-            {
-                "code": "nECi",
-                "dataElement": {
-                    "created": "2016-02-11T13:32:03.311"
-                }
-            },
-            {
-                "code": "u6Ci",
-                "dataElement": {
-                    "created": "2016-02-11T13:20:46.332"
-                }
-            },
-            {
-                "code": "zMC5",
-                "dataElement": {
-                    "created": "2016-02-11T13:17:09.140"
-                }
-            },
-            {
-                "code": "kGjp",
-                "dataElement": {
-                    "created": "2016-02-11T13:15:37.178"
-                }
-            },
-            {
-                "code": "zMjp",
-                "dataElement": {
-                    "created": "2016-02-11T13:17:09.140"
-                }
-            },
-            {
-                "code": "ODC5",
-                "dataElement": {
-                    "created": "2016-02-11T13:14:49.440"
-                }
-            },
-            {
-                "code": "ODe0",
-                "dataElement": {
-                    "created": "2016-02-11T13:14:49.440"
-                }
-            },
-            {
-                "code": "BRjp",
-                "dataElement": {
-                    "created": "2016-02-11T13:15:53.109"
-                }
-            },
-            {
-                "code": "dHe0",
-                "dataElement": {
-                    "created": "2016-02-11T13:14:21.012"
-                }
-            },
-            {
-                "code": "kGCi",
-                "dataElement": {
-                    "created": "2016-02-11T13:15:37.178"
-                }
-            },
-            {
-                "code": "EZjp",
-                "dataElement": {
-                    "created": "2016-02-11T13:37:55.587"
-                }
-            },
-            {
-                "code": "KPe0",
-                "dataElement": {
-                    "created": "2016-02-11T13:54:41.036"
-                }
-            },
-            {
-                "code": "vHDA",
-                "dataElement": {
-                    "created": "2017-06-06T19:58:21.972"
-                }
-            },
-            {
-                "code": "wDe0",
-                "dataElement": {
-                    "created": "2016-02-11T13:54:19.106"
-                }
-            },
-            {
-                "code": "ODjp",
-                "dataElement": {
-                    "created": "2016-02-11T13:14:49.440"
-                }
-            },
-            {
-                "code": "FHe0",
-                "dataElement": {
-                    "created": "2016-02-11T13:32:32.793"
-                }
-            },
-            {
-                "code": "qwC5",
-                "dataElement": {
-                    "created": "2016-02-11T13:42:01.325"
-                }
-            },
-            {
-                "code": "Zfjp",
-                "dataElement": {
-                    "created": "2016-02-11T13:16:46.401"
-                }
-            },
-            {
-                "code": "ibe0",
-                "dataElement": {
-                    "created": "2016-02-11T13:13:59.219"
-                }
-            },
-            {
-                "code": "qwe0",
-                "dataElement": {
-                    "created": "2016-02-11T13:42:01.325"
-                }
-            },
-            {
-                "code": "Knjp",
-                "dataElement": {
-                    "created": "2016-02-11T13:35:41.446"
-                }
-            },
-            {
-                "code": "F1C5",
-                "dataElement": {
-                    "created": "2016-02-11T13:31:16.132"
-                }
-            },
-            {
-                "code": "nEC5",
-                "dataElement": {
-                    "created": "2016-02-11T13:32:03.311"
-                }
-            },
-            {
-                "code": "Dyjp",
-                "dataElement": {
-                    "created": "2016-02-11T13:53:44.042"
-                }
-            },
-            {
-                "code": "Jye0",
-                "dataElement": {
-                    "created": "2016-02-11T13:39:04.819"
-                }
-            },
-            {
-                "code": "nEjp",
-                "dataElement": {
-                    "created": "2016-02-11T13:32:03.311"
-                }
-            },
-            {
-                "code": "iHDA",
-                "dataElement": {
-                    "created": "2018-01-02T11:28:10.090"
-                }
-            },
-            {
-                "code": "faCi",
-                "dataElement": {
-                    "created": "2016-02-11T13:43:20.597"
-                }
-            },
-            {
-                "code": "EZCi",
-                "dataElement": {
-                    "created": "2016-02-11T13:37:55.587"
-                }
-            },
-            {
-                "code": "Ftjp",
-                "dataElement": {
-                    "created": "2016-02-11T13:39:34.403"
-                }
-            },
-            {
-                "code": "zSCi",
-                "dataElement": {
-                    "created": "2016-02-11T13:40:53.898"
-                }
-            },
-            {
-                "code": "ibC5",
-                "dataElement": {
-                    "created": "2016-02-11T13:13:59.219"
-                }
-            },
-            {
-                "code": "PcCi",
-                "dataElement": {
-                    "created": "2016-02-11T13:18:41.156"
-                }
-            },
-            {
-                "code": "BRe0",
-                "dataElement": {
-                    "created": "2016-02-11T13:15:53.109"
-                }
-            },
-            {
-                "code": "EpC5",
-                "dataElement": {
-                    "created": "2016-02-11T13:08:51.992"
-                }
-            },
-            {
-                "code": "KnC5",
-                "dataElement": {
-                    "created": "2016-02-11T13:35:41.446"
-                }
-            },
-            {
-                "code": "Epe0",
-                "dataElement": {
-                    "created": "2016-02-11T13:08:51.992"
-                }
-            },
-            {
-                "code": "KPC5",
-                "dataElement": {
-                    "created": "2016-02-11T13:54:41.036"
-                }
-            },
-            {
-                "code": "FtC5",
-                "dataElement": {
-                    "created": "2016-02-11T13:39:34.403"
-                }
-            }
-        ],
-        "specialCharacters": [
-            {
-                "name": "_",
-                "value": "-"
-            }
-        ],
-        "translations": [],
-        "userGroupAccesses": [],
-        "attributeValues": [],
-        "userAccesses": []
-    }
-]
+{
+	"smsCommands": [
+	    {
+	        "lastUpdated": "2018-05-14T16:36:36.000",
+	        "id": "bU21Dt1e3BS",
+	        "href": "https://dhis2-sl-training.ehealthafrica.org/api/smsCommands/bU21Dt1e3BS",
+	        "created": "2018-05-14T16:36:36.000",
+	        "name": "dummyCmd1",
+	        "displayName": "dummyCmd1",
+	        "currentPeriodUsedForReporting": false,
+	        "externalAccess": false,
+	        "parserType": "KEY_VALUE_PARSER",
+	        "access": {
+	            "read": true,
+	            "update": true,
+	            "externalize": true,
+	            "delete": true,
+	            "write": true,
+	            "manage": true
+	        },
+	        "dataset": {
+	            "id": "w9c9UJ3Prus"
+	        },
+	        "smsCodes": [],
+	        "specialCharacters": [],
+	        "translations": [],
+	        "userGroupAccesses": [],
+	        "attributeValues": [],
+	        "userAccesses": []
+	    },
+	    {
+	        "lastUpdated": "2018-05-14T16:36:36.000",
+	        "id": "scEgHDred3P",
+	        "href": "https://dhis2-sl-training.ehealthafrica.org/api/smsCommands/scEgHDred3P",
+	        "created": "2018-05-14T16:36:36.000",
+	        "name": "idsr",
+	        "moreThanOneOrgUnitMessage": "User belongs to more than one OrgUnit",
+	        "displayName": "idsr",
+	        "currentPeriodUsedForReporting": false,
+	        "externalAccess": false,
+	        "noUserMessage": "No user found for that phone number",
+	        "defaultMessage": "No data values found",
+	        "completenessMethod": "AT_LEAST_ONE_DATAVALUE",
+	        "wrongFormatMessage": "Incorrectly formatted message",
+	        "separator": "=",
+	        "successMessage": "Form submitted successfully",
+	        "parserType": "KEY_VALUE_PARSER",
+	        "access": {
+	            "read": true,
+	            "update": true,
+	            "externalize": true,
+	            "delete": true,
+	            "write": true,
+	            "manage": true
+	        },
+	        "dataset": {
+	            "id": "rq0LNr72Ndo"
+	        },
+	        "smsCodes": [
+	            {
+	                "code": "F1e0",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:31:16.132"
+	                }
+	            },
+	            {
+	                "code": "drDA",
+	                "dataElement": {
+	                    "created": "2016-05-13T10:32:35.811"
+	                }
+	            },
+	            {
+	                "code": "Dye0",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:53:44.042"
+	                }
+	            },
+	            {
+	                "code": "kGC5",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:15:37.178"
+	                }
+	            },
+	            {
+	                "code": "zSC5",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:40:53.898"
+	                }
+	            },
+	            {
+	                "code": "Zye0",
+	                "dataElement": {
+	                    "created": "2016-02-11T12:53:10.231"
+	                }
+	            },
+	            {
+	                "code": "BRCi",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:15:53.109"
+	                }
+	            },
+	            {
+	                "code": "ZyCi",
+	                "dataElement": {
+	                    "created": "2016-02-11T12:53:10.231"
+	                }
+	            },
+	            {
+	                "code": "wWCi",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:36:54.244"
+	                }
+	            },
+	            {
+	                "code": "HVDA",
+	                "dataElement": {
+	                    "created": "2018-01-02T11:28:10.090"
+	                }
+	            },
+	            {
+	                "code": "F1Ci",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:31:16.132"
+	                }
+	            },
+	            {
+	                "code": "JyCi",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:39:04.819"
+	                }
+	            },
+	            {
+	                "code": "gqe0",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:09:31.552"
+	                }
+	            },
+	            {
+	                "code": "RxDA",
+	                "dataElement": {
+	                    "created": "2017-07-19T17:47:24.249"
+	                }
+	            },
+	            {
+	                "code": "wDC5",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:54:19.106"
+	                }
+	            },
+	            {
+	                "code": "ODCi",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:14:49.440"
+	                }
+	            },
+	            {
+	                "code": "pfDA",
+	                "dataElement": {
+	                    "created": "2018-01-02T11:28:10.090"
+	                }
+	            },
+	            {
+	                "code": "dxCi",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:41:11.871"
+	                }
+	            },
+	            {
+	                "code": "zMe0",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:17:09.140"
+	                }
+	            },
+	            {
+	                "code": "u6e0",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:20:46.332"
+	                }
+	            },
+	            {
+	                "code": "EZe0",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:37:55.587"
+	                }
+	            },
+	            {
+	                "code": "BpDA",
+	                "dataElement": {
+	                    "created": "2016-05-19T11:35:34.263"
+	                }
+	            },
+	            {
+	                "code": "fajp",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:43:20.597"
+	                }
+	            },
+	            {
+	                "code": "dHCi",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:14:21.012"
+	                }
+	            },
+	            {
+	                "code": "RZe0",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:36:21.927"
+	                }
+	            },
+	            {
+	                "code": "wWC5",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:36:54.244"
+	                }
+	            },
+	            {
+	                "code": "FtCi",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:39:34.403"
+	                }
+	            },
+	            {
+	                "code": "gqjp",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:09:31.552"
+	                }
+	            },
+	            {
+	                "code": "zSe0",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:40:53.898"
+	                }
+	            },
+	            {
+	                "code": "S3DA",
+	                "dataElement": {
+	                    "created": "2016-06-16T10:13:17.469"
+	                }
+	            },
+	            {
+	                "code": "wDjp",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:54:19.106"
+	                }
+	            },
+	            {
+	                "code": "ZfC5",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:16:46.401"
+	                }
+	            },
+	            {
+	                "code": "EpCi",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:08:51.992"
+	                }
+	            },
+	            {
+	                "code": "wWjp",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:36:54.244"
+	                }
+	            },
+	            {
+	                "code": "qwCi",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:42:01.325"
+	                }
+	            },
+	            {
+	                "code": "KnCi",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:35:41.446"
+	                }
+	            },
+	            {
+	                "code": "rqDA",
+	                "dataElement": {
+	                    "created": "2018-01-02T11:28:10.090"
+	                }
+	            },
+	            {
+	                "code": "JyC5",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:39:04.819"
+	                }
+	            },
+	            {
+	                "code": "dxjp",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:41:11.871"
+	                }
+	            },
+	            {
+	                "code": "DyCi",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:53:44.042"
+	                }
+	            },
+	            {
+	                "code": "FHC5",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:32:32.793"
+	                }
+	            },
+	            {
+	                "code": "KPjp",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:54:41.036"
+	                }
+	            },
+	            {
+	                "code": "DyC5",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:53:44.042"
+	                }
+	            },
+	            {
+	                "code": "RZC5",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:36:21.927"
+	                }
+	            },
+	            {
+	                "code": "nEe0",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:32:03.311"
+	                }
+	            },
+	            {
+	                "code": "Fte0",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:39:34.403"
+	                }
+	            },
+	            {
+	                "code": "KPCi",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:54:41.036"
+	                }
+	            },
+	            {
+	                "code": "qwjp",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:42:01.325"
+	                }
+	            },
+	            {
+	                "code": "g1DA",
+	                "dataElement": {
+	                    "created": "2018-01-11T12:06:17.548"
+	                }
+	            },
+	            {
+	                "code": "gqCi",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:09:31.552"
+	                }
+	            },
+	            {
+	                "code": "u6C5",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:20:46.332"
+	                }
+	            },
+	            {
+	                "code": "Zfe0",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:16:46.401"
+	                }
+	            },
+	            {
+	                "code": "wWe0",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:36:54.244"
+	                }
+	            },
+	            {
+	                "code": "Pcjp",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:18:41.156"
+	                }
+	            },
+	            {
+	                "code": "BRC5",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:15:53.109"
+	                }
+	            },
+	            {
+	                "code": "gqC5",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:09:31.552"
+	                }
+	            },
+	            {
+	                "code": "dxC5",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:41:11.871"
+	                }
+	            },
+	            {
+	                "code": "ibjp",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:13:59.219"
+	                }
+	            },
+	            {
+	                "code": "zSjp",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:40:53.898"
+	                }
+	            },
+	            {
+	                "code": "PcC5",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:18:41.156"
+	                }
+	            },
+	            {
+	                "code": "dHC5",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:14:21.012"
+	                }
+	            },
+	            {
+	                "code": "xLDA",
+	                "dataElement": {
+	                    "created": "2017-07-21T10:08:43.916"
+	                }
+	            },
+	            {
+	                "code": "ZfCi",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:16:46.401"
+	                }
+	            },
+	            {
+	                "code": "Kne0",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:35:41.446"
+	                }
+	            },
+	            {
+	                "code": "F1jp",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:31:16.132"
+	                }
+	            },
+	            {
+	                "code": "Jyjp",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:39:04.819"
+	                }
+	            },
+	            {
+	                "code": "RZCi",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:36:21.927"
+	                }
+	            },
+	            {
+	                "code": "zMCi",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:17:09.140"
+	                }
+	            },
+	            {
+	                "code": "GFDA",
+	                "dataElement": {
+	                    "created": "2018-01-02T11:28:10.090"
+	                }
+	            },
+	            {
+	                "code": "Pce0",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:18:41.156"
+	                }
+	            },
+	            {
+	                "code": "dHjp",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:14:21.012"
+	                }
+	            },
+	            {
+	                "code": "faC5",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:43:20.597"
+	                }
+	            },
+	            {
+	                "code": "Epjp",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:08:51.992"
+	                }
+	            },
+	            {
+	                "code": "ETDA",
+	                "dataElement": {
+	                    "created": "2016-05-23T23:25:13.865"
+	                }
+	            },
+	            {
+	                "code": "ZyC5",
+	                "dataElement": {
+	                    "created": "2016-02-11T12:53:10.231"
+	                }
+	            },
+	            {
+	                "code": "FHCi",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:32:32.793"
+	                }
+	            },
+	            {
+	                "code": "RZjp",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:36:21.927"
+	                }
+	            },
+	            {
+	                "code": "dxe0",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:41:11.871"
+	                }
+	            },
+	            {
+	                "code": "EZC5",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:37:55.587"
+	                }
+	            },
+	            {
+	                "code": "wDCi",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:54:19.106"
+	                }
+	            },
+	            {
+	                "code": "FHjp",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:32:32.793"
+	                }
+	            },
+	            {
+	                "code": "u6jp",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:20:46.332"
+	                }
+	            },
+	            {
+	                "code": "fae0",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:43:20.597"
+	                }
+	            },
+	            {
+	                "code": "ibCi",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:13:59.219"
+	                }
+	            },
+	            {
+	                "code": "u1DA",
+	                "dataElement": {
+	                    "created": "2017-06-06T19:22:04.351"
+	                }
+	            },
+	            {
+	                "code": "kGe0",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:15:37.178"
+	                }
+	            },
+	            {
+	                "code": "Zyjp",
+	                "dataElement": {
+	                    "created": "2016-02-11T12:53:10.231"
+	                }
+	            },
+	            {
+	                "code": "nECi",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:32:03.311"
+	                }
+	            },
+	            {
+	                "code": "u6Ci",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:20:46.332"
+	                }
+	            },
+	            {
+	                "code": "zMC5",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:17:09.140"
+	                }
+	            },
+	            {
+	                "code": "kGjp",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:15:37.178"
+	                }
+	            },
+	            {
+	                "code": "zMjp",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:17:09.140"
+	                }
+	            },
+	            {
+	                "code": "ODC5",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:14:49.440"
+	                }
+	            },
+	            {
+	                "code": "ODe0",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:14:49.440"
+	                }
+	            },
+	            {
+	                "code": "BRjp",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:15:53.109"
+	                }
+	            },
+	            {
+	                "code": "dHe0",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:14:21.012"
+	                }
+	            },
+	            {
+	                "code": "kGCi",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:15:37.178"
+	                }
+	            },
+	            {
+	                "code": "EZjp",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:37:55.587"
+	                }
+	            },
+	            {
+	                "code": "KPe0",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:54:41.036"
+	                }
+	            },
+	            {
+	                "code": "vHDA",
+	                "dataElement": {
+	                    "created": "2017-06-06T19:58:21.972"
+	                }
+	            },
+	            {
+	                "code": "wDe0",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:54:19.106"
+	                }
+	            },
+	            {
+	                "code": "ODjp",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:14:49.440"
+	                }
+	            },
+	            {
+	                "code": "FHe0",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:32:32.793"
+	                }
+	            },
+	            {
+	                "code": "qwC5",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:42:01.325"
+	                }
+	            },
+	            {
+	                "code": "Zfjp",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:16:46.401"
+	                }
+	            },
+	            {
+	                "code": "ibe0",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:13:59.219"
+	                }
+	            },
+	            {
+	                "code": "qwe0",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:42:01.325"
+	                }
+	            },
+	            {
+	                "code": "Knjp",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:35:41.446"
+	                }
+	            },
+	            {
+	                "code": "F1C5",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:31:16.132"
+	                }
+	            },
+	            {
+	                "code": "nEC5",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:32:03.311"
+	                }
+	            },
+	            {
+	                "code": "Dyjp",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:53:44.042"
+	                }
+	            },
+	            {
+	                "code": "Jye0",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:39:04.819"
+	                }
+	            },
+	            {
+	                "code": "nEjp",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:32:03.311"
+	                }
+	            },
+	            {
+	                "code": "iHDA",
+	                "dataElement": {
+	                    "created": "2018-01-02T11:28:10.090"
+	                }
+	            },
+	            {
+	                "code": "faCi",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:43:20.597"
+	                }
+	            },
+	            {
+	                "code": "EZCi",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:37:55.587"
+	                }
+	            },
+	            {
+	                "code": "Ftjp",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:39:34.403"
+	                }
+	            },
+	            {
+	                "code": "zSCi",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:40:53.898"
+	                }
+	            },
+	            {
+	                "code": "ibC5",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:13:59.219"
+	                }
+	            },
+	            {
+	                "code": "PcCi",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:18:41.156"
+	                }
+	            },
+	            {
+	                "code": "BRe0",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:15:53.109"
+	                }
+	            },
+	            {
+	                "code": "EpC5",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:08:51.992"
+	                }
+	            },
+	            {
+	                "code": "KnC5",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:35:41.446"
+	                }
+	            },
+	            {
+	                "code": "Epe0",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:08:51.992"
+	                }
+	            },
+	            {
+	                "code": "KPC5",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:54:41.036"
+	                }
+	            },
+	            {
+	                "code": "FtC5",
+	                "dataElement": {
+	                    "created": "2016-02-11T13:39:34.403"
+	                }
+	            }
+	        ],
+	        "specialCharacters": [
+	            {
+	                "name": "_",
+	                "value": "-"
+	            }
+	        ],
+	        "translations": [],
+	        "userGroupAccesses": [],
+	        "attributeValues": [],
+	        "userAccesses": []
+	    }
+	]
+}
