@@ -30,6 +30,62 @@
 	    },
 	    {
 	        "lastUpdated": "2018-05-14T16:36:36.000",
+	        "id": "bU21Dt1e3BS",
+	        "href": "https://dhis2-sl-training.ehealthafrica.org/api/smsCommands/bU21Dt1e3BS",
+	        "created": "2018-05-14T16:36:36.000",
+	        "name": "dummyCmd2",
+	        "displayName": "dummyCmd2",
+	        "currentPeriodUsedForReporting": false,
+	        "externalAccess": false,
+	        "parserType": "KEY_VALUE_PARSER",
+	        "access": {
+	            "read": true,
+	            "update": true,
+	            "externalize": true,
+	            "delete": true,
+	            "write": true,
+	            "manage": true
+	        },
+	        "dataset": {
+	            "id": "w9c9UJ3Prus"
+	        },
+	        "smsCodes": [],
+	        "specialCharacters": [],
+	        "translations": [],
+	        "userGroupAccesses": [],
+	        "attributeValues": [],
+	        "userAccesses": []
+	    },
+	    {
+	        "lastUpdated": "2018-05-14T16:36:36.000",
+	        "id": "bU21Dt1e3BS",
+	        "href": "https://dhis2-sl-training.ehealthafrica.org/api/smsCommands/bU21Dt1e3BS",
+	        "created": "2018-05-14T16:36:36.000",
+	        "name": "anotherCmd",
+	        "displayName": "anotherCmd",
+	        "currentPeriodUsedForReporting": false,
+	        "externalAccess": false,
+	        "parserType": "KEY_VALUE_PARSER",
+	        "access": {
+	            "read": true,
+	            "update": true,
+	            "externalize": true,
+	            "delete": true,
+	            "write": true,
+	            "manage": true
+	        },
+	        "dataset": {
+	            "id": "w9c9UJ3Prus"
+	        },
+	        "smsCodes": [],
+	        "specialCharacters": [],
+	        "translations": [],
+	        "userGroupAccesses": [],
+	        "attributeValues": [],
+	        "userAccesses": []
+	    },	
+	    {
+	        "lastUpdated": "2018-05-14T16:36:36.000",
 	        "id": "scEgHDred3P",
 	        "href": "https://dhis2-sl-training.ehealthafrica.org/api/smsCommands/scEgHDred3P",
 	        "created": "2018-05-14T16:36:36.000",

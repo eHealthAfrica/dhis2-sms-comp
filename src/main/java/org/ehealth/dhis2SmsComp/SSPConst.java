@@ -17,7 +17,7 @@ public class SSPConst {
 	}
 	
 	// The bit lengths of each part of the message are statically set here
-	public static int CMD_BITLEN = 3;
+	public static int CMD_BITLEN = 8;
 	public static int SUBM_DATE_BITLEN = 12;
 	public static int EPOCH_DATE_BITLEN = 32;
 	public static int TYPE_BITLEN = 4;

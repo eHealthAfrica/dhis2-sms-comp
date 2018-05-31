@@ -28,4 +28,11 @@ public class BinaryUtils {
 	    if(n <= 0) throw new IllegalArgumentException();
 	    return 31 - Integer.numberOfLeadingZeros(n);
 	}
+	
+	/**
+	 * @return a unique hash for a string for a given bit length
+	 */
+	public static int hash(String s, int bitlen) {
+		return Math.abs(s.hashCode()) % (int)Math.pow(2, bitlen);
+	}
 }

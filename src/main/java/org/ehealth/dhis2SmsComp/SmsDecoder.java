@@ -3,19 +3,16 @@ package org.ehealth.dhis2SmsComp;
 import java.io.ByteArrayInputStream;
 import java.io.EOFException;
 import java.io.IOException;
-import java.io.Reader;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Objects;
 
 import org.ehealth.dhis2SmsComp.Models.SmsCode;
 import org.ehealth.dhis2SmsComp.Models.SmsCommand;
 import org.ehealth.dhis2SmsComp.Models.SmsSubmission;
 import org.ehealth.dhis2SmsComp.Utils.BitInputStream;
-
-import com.google.gson.Gson;
 
 /**
  * A class used to decode an SMS which was previously encoded using SMSEncoder
@@ -43,9 +40,9 @@ public class SmsDecoder {
 	 * from decodeSMS
 	 * @param smsBytes
 	 * @return
-	 * @throws IOException
+	 * @throws Exception 
 	 */
-	public String decode(byte[] smsBytes) throws IOException {
+	public String decode(byte[] smsBytes) throws Exception {
 		SmsSubmission subm = decodeSMS(smsBytes);
 		return subm.toString();
 	}
@@ -54,18 +51,19 @@ public class SmsDecoder {
 	 * Decodes an SMS as a byte array previously encoded by SmsEncoder
 	 * @param smsBytes
 	 * @return
-	 * @throws IOException
+	 * @throws Exception 
 	 */
-	public SmsSubmission decodeSMS(byte[] smsBytes) throws IOException
+	public SmsSubmission decodeSMS(byte[] smsBytes) throws Exception
     {
 		ByteArrayInputStream byteStream = new ByteArrayInputStream(smsBytes);
 		BitInputStream bitStream = new BitInputStream(byteStream);
 		SmsSubmission subm = new SmsSubmission();
 		
 		//Read command
-		int cmdId = bitStream.read(SSPConst.CMD_BITLEN);
-		subm.currentSmsCmd = smsCmdList.get(cmdId);
-				
+		int cmdHash = bitStream.read(SSPConst.CMD_BITLEN);
+		subm.currentSmsCmd = SmsSubmission.findSmsCommand(cmdHash, smsCmdList);
+		Objects.requireNonNull(subm.currentSmsCmd);
+		
 		//Read date of submission
 		int submDate = bitStream.read(SSPConst.SUBM_DATE_BITLEN);
 		if (submDate > 0) subm.submDate = submDate;
