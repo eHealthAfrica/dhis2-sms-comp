@@ -13,6 +13,7 @@ import org.apache.commons.io.IOUtils;
 import org.ehealth.dhis2SmsComp.Models.SmsCode;
 import org.ehealth.dhis2SmsComp.Models.SmsCommand;
 import org.ehealth.dhis2SmsComp.Models.SmsSubmission;
+import org.ehealth.dhis2SmsComp.Utils.BinaryUtils;
 import org.ehealth.dhis2SmsComp.Utils.BitOutputStream;
 
 import com.google.gson.Gson;
@@ -62,9 +63,9 @@ public class SmsEncoder {
 		ByteArrayOutputStream byteStream = new ByteArrayOutputStream();
 		BitOutputStream bitStream = new BitOutputStream(byteStream);
 								
-		//Write cmd id
-		int cmdId = this.smsCmdList.indexOf(subm.currentSmsCmd);
-		bitStream.write(cmdId, SSPConst.CMD_BITLEN);
+		//Write cmd hash
+		int cmdHash = BinaryUtils.hash(subm.currentSmsCmd.name, SSPConst.CMD_BITLEN);
+		bitStream.write(cmdHash, SSPConst.CMD_BITLEN);
 
 		//Write out date
 		bitStream.write(subm.submDate, SSPConst.SUBM_DATE_BITLEN);

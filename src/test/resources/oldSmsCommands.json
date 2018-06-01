@@ -1,5 +1,17 @@
 [
     {
+        "commandName": "Here's a Test Form",
+        "parserType": "KEY_VALUE_PARSER"
+    },
+    {
+        "commandName": "And another Test Form",
+        "parserType": "KEY_VALUE_PARSER"
+    },
+    {
+        "commandName": "Oh look a Test Form",
+        "parserType": "KEY_VALUE_PARSER"
+    },
+    {
         "commandName": "George's Test Form",
         "parserType": "KEY_VALUE_PARSER"
     },
