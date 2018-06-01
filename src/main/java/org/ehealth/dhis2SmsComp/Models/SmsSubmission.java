@@ -156,6 +156,21 @@ public class SmsSubmission {
     }
 	
     /**
+     * @param smsCmdName
+     * @param smsCmdList
+     * @return the SmsCommand if found
+     */
+    public static SmsCommand findSmsCommand(int smsCmdHash, ArrayList<SmsCommand> smsCmdList) {
+		for (SmsCommand cmd : smsCmdList) {
+			if (BinaryUtils.hash(cmd.name, SSPConst.CMD_BITLEN) == smsCmdHash) {
+				return cmd;
+			}
+		}
+		
+		return null;
+    }    
+    
+    /**
      * @param key
      * @return the SmsCode if found
      */
