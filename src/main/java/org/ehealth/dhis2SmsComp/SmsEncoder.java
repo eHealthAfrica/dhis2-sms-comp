@@ -10,6 +10,7 @@ import java.util.Arrays;
 import java.util.Date;
 
 import org.apache.commons.io.IOUtils;
+import org.ehealth.dhis2SmsComp.SSPConst.Version;
 import org.ehealth.dhis2SmsComp.Models.SmsCode;
 import org.ehealth.dhis2SmsComp.Models.SmsCommand;
 import org.ehealth.dhis2SmsComp.Models.SmsSubmission;
@@ -62,7 +63,10 @@ public class SmsEncoder {
     {
 		ByteArrayOutputStream byteStream = new ByteArrayOutputStream();
 		BitOutputStream bitStream = new BitOutputStream(byteStream);
-								
+
+		//Write out version number
+		bitStream.write(SSPConst.CUR_VERSION.ordinal(), SSPConst.VER_BITLEN);
+		
 		//Write cmd hash
 		int cmdHash = BinaryUtils.hash(subm.currentSmsCmd.name, SSPConst.CMD_BITLEN);
 		bitStream.write(cmdHash, SSPConst.CMD_BITLEN);

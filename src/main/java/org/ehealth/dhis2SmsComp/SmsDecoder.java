@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Objects;
 
+import org.ehealth.dhis2SmsComp.SSPConst.Version;
 import org.ehealth.dhis2SmsComp.Models.SmsCode;
 import org.ehealth.dhis2SmsComp.Models.SmsCommand;
 import org.ehealth.dhis2SmsComp.Models.SmsSubmission;
@@ -43,7 +44,13 @@ public class SmsDecoder {
 	 * @throws Exception 
 	 */
 	public String decode(byte[] smsBytes) throws Exception {
-		SmsSubmission subm = decodeSMS(smsBytes);
+		SmsSubmission subm = null;
+		try {
+			subm = decodeSMS(smsBytes, SSPConst.CUR_VERSION);			
+		} catch (Exception e) {
+			subm = decodeSMS(smsBytes, Version.ONE);
+		}
+		
 		return subm.toString();
 	}
 	
@@ -53,16 +60,35 @@ public class SmsDecoder {
 	 * @return
 	 * @throws Exception 
 	 */
-	public SmsSubmission decodeSMS(byte[] smsBytes) throws Exception
+	public SmsSubmission decodeSMS(byte[] smsBytes, Version decodeVer) throws Exception
     {
 		ByteArrayInputStream byteStream = new ByteArrayInputStream(smsBytes);
 		BitInputStream bitStream = new BitInputStream(byteStream);
 		SmsSubmission subm = new SmsSubmission();
 		
-		//Read command
-		int cmdHash = bitStream.read(SSPConst.CMD_BITLEN);
-		subm.currentSmsCmd = SmsSubmission.findSmsCommand(cmdHash, smsCmdList);
+		//Read version number
+		if (decodeVer == Version.ONE) {
+			//Read command with OLD_CMD_BITLEN
+			int cmdIndex = bitStream.read(SSPConst.OLD_CMD_BITLEN);
+			subm.currentSmsCmd = smsCmdList.get(cmdIndex);			
+		} else {
+			int intVers = bitStream.read(SSPConst.VER_BITLEN);
+			Version msgVers = Version.values()[intVers];
+			if (msgVers != decodeVer) {
+				bitStream.close();
+				throw new Exception("Unsupported version: " + msgVers + ", expected: " + decodeVer);
+			}
+			//Read command
+			int cmdHash = bitStream.read(SSPConst.CMD_BITLEN);
+			subm.currentSmsCmd = SmsSubmission.findSmsCommand(cmdHash, smsCmdList);			
+		}
+
+		//Ensure we have a valid SMS command now
 		Objects.requireNonNull(subm.currentSmsCmd);
+		if (subm.currentSmsCmd.smsCodes == null || subm.currentSmsCmd.smsCodes.isEmpty()) {
+			bitStream.close();
+			throw new Exception("No SMS Codes for the given SMS Command: " + subm.currentSmsCmd.name);
+		}
 		
 		//Read date of submission
 		int submDate = bitStream.read(SSPConst.SUBM_DATE_BITLEN);
