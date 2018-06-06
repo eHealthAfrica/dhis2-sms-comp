@@ -25,7 +25,7 @@ public class TestDecoding extends TestCase {
 		String decodedSMS = "";
 		try {
 			cmdsJson = new FileReader("src/test/resources/smsCommands.json");
-			String encodedSMS = new String(Files.readAllBytes(Paths.get("src/test/resources/encodedSMS.txt")));
+			String encodedSMS = new String(Files.readAllBytes(Paths.get("src/test/resources/encodedSMS_v2.txt")));
 			byte[] binEncSMS = Base64.getDecoder().decode(encodedSMS);
 			ArrayList<SmsCommand> smsCmds = SmsCommandParser.parse(IOUtils.toString(cmdsJson));
 			SmsDecoder dec = new SmsDecoder(smsCmds);
@@ -49,13 +49,13 @@ public class TestDecoding extends TestCase {
     /**
      * Test the decoding of an SMS using the old SMS command format
      */
-    public void testDecodingOld()
+    public void testDecodingOldSMSCommands()
     {		
 		FileReader cmdsJson = null;
 		String decodedSMS = "";
 		try {
 			cmdsJson = new FileReader("src/test/resources/oldSmsCommands.json");
-			String encodedSMS = new String(Files.readAllBytes(Paths.get("src/test/resources/encodedSMS.txt")));
+			String encodedSMS = new String(Files.readAllBytes(Paths.get("src/test/resources/encodedSMS_v2.txt")));
 			byte[] binEncSMS = Base64.getDecoder().decode(encodedSMS);
 			ArrayList<SmsCommand> smsCmds = SmsCommandParser.parse(IOUtils.toString(cmdsJson));
 			SmsDecoder dec = new SmsDecoder(smsCmds);
@@ -74,5 +74,65 @@ public class TestDecoding extends TestCase {
 		}
 		
 		Assert.assertEquals(expectedSMS, decodedSMS);
-    }    
+    }
+
+    /**
+     * Test the decoding of an SMS using the old SMS command format
+     */
+    public void testDecoding_v1Msg()
+    {		
+		FileReader cmdsJson = null;
+		String decodedSMS = "";
+		try {
+			cmdsJson = new FileReader("src/test/resources/smsCommands.json");
+			String encodedSMS = new String(Files.readAllBytes(Paths.get("src/test/resources/encodedSMS_v1.txt")));
+			byte[] binEncSMS = Base64.getDecoder().decode(encodedSMS);
+			ArrayList<SmsCommand> smsCmds = SmsCommandParser.parse(IOUtils.toString(cmdsJson));
+			SmsDecoder dec = new SmsDecoder(smsCmds);
+			decodedSMS = dec.decode(binEncSMS);
+		} catch (Exception e) {
+			e.printStackTrace();
+			Assert.fail(e.getMessage());
+		}
+						
+		String expectedSMS = "";
+		try {
+			expectedSMS = new String(Files.readAllBytes(Paths.get("src/test/resources/decodedSMS.txt")));
+		} catch (IOException e) {
+			e.printStackTrace();
+			Assert.fail(e.getMessage());
+		}
+		
+		Assert.assertEquals(expectedSMS, decodedSMS);
+    }
+    
+    /**
+     * Test the decoding of an SMS using the old SMS command format
+     */
+    public void testDecoding_v1Msg_OldSMSCommands()
+    {		
+		FileReader cmdsJson = null;
+		String decodedSMS = "";
+		try {
+			cmdsJson = new FileReader("src/test/resources/oldSmsCommands.json");
+			String encodedSMS = new String(Files.readAllBytes(Paths.get("src/test/resources/encodedSMS_v1.txt")));
+			byte[] binEncSMS = Base64.getDecoder().decode(encodedSMS);
+			ArrayList<SmsCommand> smsCmds = SmsCommandParser.parse(IOUtils.toString(cmdsJson));
+			SmsDecoder dec = new SmsDecoder(smsCmds);
+			decodedSMS = dec.decode(binEncSMS);
+		} catch (Exception e) {
+			e.printStackTrace();
+			Assert.fail(e.getMessage());
+		}
+						
+		String expectedSMS = "";
+		try {
+			expectedSMS = new String(Files.readAllBytes(Paths.get("src/test/resources/decodedSMS.txt")));
+		} catch (IOException e) {
+			e.printStackTrace();
+			Assert.fail(e.getMessage());
+		}
+		
+		Assert.assertEquals(expectedSMS, decodedSMS);
+    }
 }
