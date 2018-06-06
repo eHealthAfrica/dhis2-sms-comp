@@ -37,7 +37,7 @@ public class TestEncoding extends TestCase {
 		String base64Subm = Base64.getEncoder().encodeToString(binarySubm);
 		String encodedSMS = "";
 		try {
-			encodedSMS = new String(Files.readAllBytes(Paths.get("src/test/resources/encodedSMS.txt")));
+			encodedSMS = new String(Files.readAllBytes(Paths.get("src/test/resources/encodedSMS_v2.txt")));
 		} catch (IOException e) {
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
@@ -68,7 +68,7 @@ public class TestEncoding extends TestCase {
 		String base64Subm = Base64.getEncoder().encodeToString(binarySubm);
 		String encodedSMS = "";
 		try {
-			encodedSMS = new String(Files.readAllBytes(Paths.get("src/test/resources/encodedSMS.txt")));
+			encodedSMS = new String(Files.readAllBytes(Paths.get("src/test/resources/encodedSMS_v2.txt")));
 		} catch (IOException e) {
 			e.printStackTrace();
 			Assert.fail(e.getMessage());
