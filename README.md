@@ -16,7 +16,7 @@ Currently the compression library only supports DHIS2 aggregate data set reports
 
 ## Using it
 
-This compression library is built as a .jar file and intended to be included as a dependency in your `build.gradle`, for both app side and server side, i.e. the mobile app should be a native Android app and server side will need to be a Java web server of some sort.
+This compression library is built as a .jar file and intended to be included as a dependency in your `build.gradle`, for both app side and receiving side, i.e. the mobile app should be a native Android app and the receiving side will need to be a Java web server of some sort, which can decompress the incoming SMS before forwarding the message to DHIS2 in the expected format.
 
 It uses a service called [Jitpack](https://jitpack.io) which automatically monitors public Github repositories and builds each new release into .jar files, which it makes publicly available. See [here](https://jitpack.io/#eHealthAfrica/dhis2-sms-comp) for a list of releases of this library as well as details about how to include it as a dependency.
 
