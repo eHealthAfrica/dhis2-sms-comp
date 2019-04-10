@@ -34,6 +34,13 @@ public class SmsCode {
 	@SerializedName(value="code", alternate={"smsCode"})
     public String code;
 
+	@Expose
+	public DataElement dataElement;
+	private class DataElement {
+		@Expose
+		public String created;
+	}
+	
 	public String getCreated() {
 		return dataElement.created;
 	}
@@ -41,13 +48,6 @@ public class SmsCode {
 	public String getCode() {
 		return code;
 	}	
-	
-	public DataElement dataElement;
-	private class DataElement {
-		@Expose
-		public String created;
-	}
-	
 	
     @Override
     public String toString() {
