@@ -89,8 +89,17 @@ public class SmsDecoder {
 		//Read version number
 		if (decodeVer == Version.ONE) {
 			//Read command with OLD_CMD_BITLEN
-			int cmdIndex = bitStream.read(SSPConst.OLD_CMD_BITLEN);
-			subm.currentSmsCmd = smsCmdList.get(cmdIndex);			
+			/*
+			 * There's a bug where we cannot use this old way of looking up commands via index
+			 * anymore, as the index doesn't stay the same when we add new commands.
+			 * For now, IDSR is the only thing reported for Version.ONE, so we are simply
+			 * hardcoding a lookup for this in the cmdList.
+			 */
+			for (SmsCommand smsCmd : smsCmdList) {
+				if (smsCmd.name.contains("idsr")) {
+					subm.currentSmsCmd = smsCmd;
+				}
+			}
 		} else {
 			int intVers = bitStream.read(SSPConst.VER_BITLEN);
 			Version msgVers = Version.values()[intVers];
