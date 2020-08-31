@@ -100,6 +100,11 @@ public class SmsDecoder {
 					subm.currentSmsCmd = smsCmd;
 				}
 			}
+			// If it's still null, use the old method
+			if (subm.currentSmsCmd == null) {
+				int cmdIndex = bitStream.read(SSPConst.OLD_CMD_BITLEN);
+				subm.currentSmsCmd = smsCmdList.get(cmdIndex);
+			}
 		} else {
 			int intVers = bitStream.read(SSPConst.VER_BITLEN);
 			Version msgVers = Version.values()[intVers];
