@@ -96,6 +96,8 @@ public class SmsDecoder {
 			 * hardcoding a lookup for this in the cmdList.
 			 */
 			// "idsr" is index 4
+			// Read from the index to use it up, but ignore
+			bitStream.read(SSPConst.OLD_CMD_BITLEN);
 			subm.currentSmsCmd = smsCmdList.get(4);
 		} else {
 			int intVers = bitStream.read(SSPConst.VER_BITLEN);
